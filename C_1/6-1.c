@@ -1,4 +1,4 @@
-// while¹®
+// whileë¬¸
 /*#include <stdio.h>
 
 
@@ -15,7 +15,7 @@ int main(void)
 }
 */
 
-//while¹®À» ÀÌ¿ëÇÑ ±¸±¸´Ü Ãâ·Â ÇÁ·Î±×·¥
+//whileë¬¸ì„ ì´ìš©í•œ êµ¬êµ¬ë‹¨ ì¶œë ¥ í”„ë¡œê·¸ë¨
 /*#include <stdio.h>
 
 int main(void)
@@ -23,7 +23,7 @@ int main(void)
 	int n;
 	int i = 1;
 
-	printf("Ãâ·ÂÇÏ°í½ÍÀº ´ÜÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+	printf("ì¶œë ¥í•˜ê³ ì‹¶ì€ ë‹¨ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 	scanf_s("%d", &n);
 
 	while (i <= 9)
@@ -35,7 +35,7 @@ int main(void)
 }
 */
 
-//while¹®À» ÀÌ¿ëÇÑ Á¦°ö°ª Ãâ·Â ÇÁ·Î±×·¥
+//whileë¬¸ì„ ì´ìš©í•œ ì œê³±ê°’ ì¶œë ¥ í”„ë¡œê·¸ë¨
 /*#include <stdio.h>
 
 int main(void)
@@ -43,7 +43,7 @@ int main(void)
 	int n;
 
 	printf("============================\n");
-	printf("      n          nÀÇ °ö\n");
+	printf("      n          nì˜ ê³±\n");
 	printf("============================\n");
 
 	n = 1;
@@ -56,14 +56,14 @@ int main(void)
 }
 */
 
-//1ºÎÅÍ n±îÁöÀÇ ÇÕ °è»êÇÏ´Â ÇÁ·Î±×·¥
+//1ë¶€í„° nê¹Œì§€ì˜ í•© ê³„ì‚°í•˜ëŠ” í”„ë¡œê·¸ë¨
 /*#include <stdio.h>
 
 int main(void)
 {
 	int i, n, sum;
 
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
 	scanf_s("%d", &n);
 
 	i = 1;
@@ -75,19 +75,19 @@ int main(void)
 		i++;
 	}
 
-	printf("1ºÎÅÍ %d±îÁöÀÇ ÇÕÀº %dÀÔ´Ï´Ù.",n,sum);
+	printf("1ë¶€í„° %dê¹Œì§€ì˜ í•©ì€ %dì…ë‹ˆë‹¤.",n,sum);
 	return 0;
 }
 */
 
-//while¹®À¸·Î Â¦¼öµéÀÇ ÇÕ ±¸ÇÏ±â
+//whileë¬¸ìœ¼ë¡œ ì§ìˆ˜ë“¤ì˜ í•© êµ¬í•˜ê¸°
 /*#include <stdio.h>
 
 int main(void)
 {
 	int i, n, sum;
 
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
 	scanf_s("%d", &n);
 
 	i = 1;
@@ -99,12 +99,12 @@ int main(void)
 		i = i + 2;
 	}
 	
-	printf("1ºÎÅÍ %d±îÁöÀÇ ÇÕÀº %dÀÔ¤¤´Ù\n", n, sum);
+	printf("1ë¶€í„° %dê¹Œì§€ì˜ í•©ì€ %dì…ã„´ë‹¤\n", n, sum);
 	return 0;
 }
 */
 
-//while ¹®À» ÀÌ¿ëÇÑ ÇÕ°è ÇÁ·Î±×·¥
+//while ë¬¸ì„ ì´ìš©í•œ í•©ê³„ í”„ë¡œê·¸ë¨
 /*
 #include <stdio.h>
 
@@ -116,19 +116,19 @@ int main(void)
 	sum = 0;
 	while (i < 5)
 	{
-		printf("°©À» ÀÔ·ÂÇÏ½Ã¿À:");
+		printf("ê°‘ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		scanf_s("%d", &n);
 		sum = sum + n;
 		i++;
 	}
 
-	printf("ÇÕ°è´Â %dÀÔ´Ï´Ù.\n", sum);
+	printf("í•©ê³„ëŠ” %dì…ë‹ˆë‹¤.\n", sum);
 
 	return 0;
 }
 */
 
-// for¹®
+// forë¬¸
 /*
 #include <stdio.h>
 
@@ -144,7 +144,7 @@ int main(void)
 }
 */
 
-//for ¹® 1ºÎÅÍ 10±îÁöÀÇ Á¤¼öÀÇ ÇÕ
+//for ë¬¸ 1ë¶€í„° 10ê¹Œì§€ì˜ ì •ìˆ˜ì˜ í•©
 /*
 #include <stdio.h>
 
@@ -156,13 +156,13 @@ int main(void)
 	for (i = 1; i <= 10; i++)
 	{
 		sum = sum + i;
-		printf("1ºÎÅÍ 10±îÁöÀÇ Á¤¼öÀÇ ÇÕ: %d\n", sum);
+		printf("1ë¶€í„° 10ê¹Œì§€ì˜ ì •ìˆ˜ì˜ í•©: %d\n", sum);
 	}
 	return 0;
 }
 */
 
-// ÁßÃ¸ for ¹®À» ÀÌ¿ëÇÏ¿© * ±âÈ£¸¦ »ç°¢Çü ¸ğ¾çÀ¸·Î Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥
+// ì¤‘ì²© for ë¬¸ì„ ì´ìš©í•˜ì—¬ * ê¸°í˜¸ë¥¼ ì‚¬ê°í˜• ëª¨ì–‘ìœ¼ë¡œ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨
 /*
 #include <stdio.h>
 
@@ -183,7 +183,7 @@ int main(void)
 }
 */
 
-// for ¹® ¿¹Á¦ 2
+// for ë¬¸ ì˜ˆì œ 2
 /*
 #include <stdio.h>
 
@@ -203,7 +203,7 @@ int main(void)
 }
 */
 
-// for¹® Áß°£Á¡°Ë 1
+// forë¬¸ ì¤‘ê°„ì ê²€ 1
 /*
 #include <stdio.h>
 
@@ -219,7 +219,7 @@ int main(void)
 }
 */
 
-//for ¹® Áß°£Á¡°Ë 2
+//for ë¬¸ ì¤‘ê°„ì ê²€ 2
 /*
 #include <stdio.h>
 
@@ -235,7 +235,7 @@ int main(void)
 }
 */
 
-// ÁßÃ¸ for ¹® Áß°£Á¡°Ë
+// ì¤‘ì²© for ë¬¸ ì¤‘ê°„ì ê²€
 /*
 #include <stdio.h>
 
@@ -247,14 +247,14 @@ int main(void)
 	{
 		for (j = 0; j < 3; j++)
 		{
-			printf("%d °öÇÏ±â %d´Â %d\n", i, j, i * j);
+			printf("%d ê³±í•˜ê¸° %dëŠ” %d\n", i, j, i * j);
 		}
 	}
 	return 0;
 }
 */
 
-// ¹«ÇÑ·çÇÁ¿Í break
+// ë¬´í•œë£¨í”„ì™€ break
 /*
 #include <stdio.h>
 
