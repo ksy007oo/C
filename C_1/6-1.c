@@ -1,6 +1,6 @@
 // while문
 /*
-```
+```c
 #include <stdio.h>
 
 
