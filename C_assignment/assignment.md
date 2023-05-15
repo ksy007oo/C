@@ -62,8 +62,8 @@ int main(void)
 
     for(i = 0; i < 6; i++) 
     {
-        car1_dist += rand() % 100; // 0부터 99까지 난수를 발생시켜 car1_dist에 더함
-        car2_dist += rand() % 100; // 0부터 99까지 난수를 발생시켜 car2_dist에 더함
+        car1_dist += rand() % 100; // 0~99까지 난수 발생 시킨 후 car1_dist에 더함
+        car2_dist += rand() % 100; // 0~99까지 난수 발생 시킨 후 car2_dist에 더함
         disp_car(1, car1_dist); //disp_car함수에 설정한 매개변수 int car_number와 int distance에 1과 car1_dist 대입
         disp_car(2, car2_dist); //disp_car함수에 설정한 매개변수 int car_number와 int distance에 2와 car2_dist 대입
         printf("------------\n");
