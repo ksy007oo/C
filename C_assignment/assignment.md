@@ -37,3 +37,39 @@ int coin_toss( void ) //호출 할 coin_toss함수 설정
 ### 자동차 게임
 
 ```c
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <time.h>
+
+void disp_car(int car_number, int distance) //호출 할 함수 설정
+{
+    int i;
+    printf("CAR#%d: ", car_number);
+    for(i = 0; i < distance / 10; i++) /* i를 i < distance / 10 조건에 틀릴 때까지 실행 시키고 '*' 찍기 */
+    {
+        printf("*");
+    }
+    printf("\n");
+}
+
+int main(void)
+{
+    int i; // main 함수에 변수 i 설정
+    int car1_dist = 0, car2_dist = 0; // main 함수에 변수 car1_dist , car2_dist 설정
+
+    srand((unsigned)time(NULL)); //난수 발생 함수
+
+    for(i = 0; i < 6; i++) 
+    {
+        car1_dist += rand() % 100; // 0부터 99까지 난수를 발생시켜 car1_dist에 더함
+        car2_dist += rand() % 100; // 0부터 99까지 난수를 발생시켜 car2_dist에 더함
+        disp_car(1, car1_dist); //disp_car함수에 설정한 매개변수 int car_number와 int distance에 1과 car1_dist 대입
+        disp_car(2, car2_dist); //disp_car함수에 설정한 매개변수 int car_number와 int distance에 2와 car2_dist 대입
+        printf("------------\n");
+        _getch(); // 키보드로부터 입력받을 때 사용, 입력된 키 즉시 읽어들임
+    }
+    return 0; // 0으로 값을 반환해 실행 종료
+}
+```
+----------------------------------------------------------------------------------
