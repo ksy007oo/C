@@ -114,4 +114,21 @@ int main(void)
 }
 ```
 --------------------------------------------------
+### 삼각함수 라이브러리
+```c
+#include <math.h> // 여러 수학 함수들을 포함하는 표준 라이브러리
+#include <stdio.h>
 
+int main(void)
+{
+    double pi = 3.1415926535; // double형 변수로 pi를 3.1415926535로 설정
+    double x, y; // double형 변수로 x, y 설정
+
+    x = pi / 2; // pi / 2 를 x에 대입
+    y = sin(x); // y 에 sin ( 1. 570796 ) 대입
+    printf("sin( %f ) = %f\n", x, y); // double형의 형식지정자 %f를 사용해 출력
+    y = cos(x); // y 에 cos ( 1. 570796 ) 대입 
+    printf("cos( %f ) = %f\n", x, y); // double형의 형식지정자 %f를 사용해 출력
+}
+```
+---
