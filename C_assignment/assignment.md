@@ -177,5 +177,44 @@ int main(void)
 1. exit() : exit()을 호출하면 실행중인 프로그램 종료 시킴.
 2. system("...") : 운영 체제의 명령 프롬프트에게 명령어를 전달해 실행시키는 함수.
 3.  time(NULL) : 현재 시각을 반환. ( 1970년 1월 1일부터 흘러온 초를 반환.)
+
+ex) system() 함수 사용
 ```c
-#
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    system("dir");
+    printf("아무 키나 치세요\n");
+    _getch();
+    system("cls");
+
+    return 0;
+}
+```
+---
+### 시간 맞추기 게임
+```c
+#include <stdio.h>
+#include <time.h> // <time.h> 헤더 파일에 time() 이 선언되어있음
+
+int main(void)
+{
+    time_t start, end; // time_t는 unsigned long과 동일
+    start = time(NULL); // 라이브러리 함수 time()은 1970년 1월 1일 이후의 시간을 초 단위로 반환
+    printf("10초가 되면 아무키나 누르세요.\n");
+    while(1) // 무한 루프 발생
+    {
+        if(getchar()) // getchar()는 함수는 사용자의 입력을 받아들이거나 , 특정한 조건을 확인하거나, 키 입력을 처리하는 루프에서 사용
+        {             // 여기서 getchar()는 키 입력을 처리하는 것으로 사용
+            break;
+        }
+    }
+    printf("종료되었습니다.\n");
+    end = time(NULL);
+    printf("경과된 시간은 %ld 초 입니다.\n", end - start);
+    return 0;
+}
+```
+---
