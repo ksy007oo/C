@@ -132,3 +132,50 @@ int main(void)
 }
 ```
 ---
+### floor()와 ceil()함수
+```c
+double result, value = 1.6;
+
+result = floor(value); // floor은 내림 , result = 1.0
+printf("%lf", result);
+
+result = ceil(value); // ceil은 올림 , result = 2.0
+printf("%lf", result);
+```
+---
+### fabs()
+- fabs()는 실수를 받아서 절댓값을 반환한다.
+```c
+printf("12.0의 절댓값은 %f\n", fabs(12.0));
+printf("-12.0의 절댓값은 %f\n", fabs(-12.0));
+```
+---
+### pow()와 sqrt()
+```c
+```
+---
+### 중간 점검
+1. 90도에서의 싸인 값을 계산하는 문장.
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+    int angle = 90;
+    int x, y;
+    
+    x = 90;
+    y = sin(x);
+    printf("sin(%d) = %d\n", x, y);
+}
+```
+2. rand() % 10 이 계산하는 값의 범위는?
+->
+---
+### 기타 함수 
+1. exit() : exit()을 호출하면 실행중인 프로그램 종료 시킴.
+2. system("...") : 운영 체제의 명령 프롬프트에게 명령어를 전달해 실행시키는 함수.
+3.  time(NULL) : 현재 시각을 반환. ( 1970년 1월 1일부터 흘러온 초를 반환.)
+```c
+#
