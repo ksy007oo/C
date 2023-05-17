@@ -283,7 +283,7 @@ int main(void)
 #include <stdio.h>
 #include <math.h>
 
-int menu(void)
+int menu(void) // menu함수 설정
 {
     int n;
     printf("1.팩토리얼\n");
@@ -298,11 +298,11 @@ int menu(void)
     return n;
 }
 
-void factorial()
+void factorial() // 반환값이 없고, 호출 할 factorial 함수 설정
 {
-    long long n, result = 1, i;
+    long long n, result = 1, i; // long long형 변수 n, result = 1 , i 설정
     printf("정수를 입력하시오: ");
-    scanf("%lld", &n);
+    scanf("%lld", &n); // %lld는 long long 타입을 출력하기 위한 형식 지정자 , long long n에서 값을 받아옴
     for(i = 1; i <= n; i++)
     {
         result = result * i;
@@ -310,21 +310,21 @@ void factorial()
     printf("결과 = %lld\n\n", result);
 }
 
-void sine()
+void sine() // 반환할 값이 없는 sine함수 설정 , 나중에 함수를 호출하기 위해 만듦
 {
     double a, result;
     printf("각도를 입력하시오: ");
-    scanf("%lf", &a);
+    scanf("%lf", &a); // %lf 는 double 타입을 출력하기 위한 형식지정자. double a에서 값을 받아옴
     result = sin(a);
     printf("결과 = %lf\n\n", result);
 }
 
-void logBase10()
+void logBase10() // 반환할 값이 없는 logBase10함수 설정, 호출 하기 위해 만듦.
 {
     double a, result;
     printf("실수 값을 입력하시오: ");
     scanf("%lf", &a);
-    if (a <= 0.0)
+    if (a <= 0.0) // 만약 a가 0.0보다 작거나 같으면 오류를 출력하고, 그렇지 않으면 a값을 log10(a)에 넣고 result값에 넣어서 출력
     {
         printf("오류\n");
     }
@@ -337,31 +337,31 @@ void logBase10()
 
 int main(void)
 {
-    while(1)
+    while(1) // 무한 루프
     {
         switch (menu())
         {
-            case 1:
+            case 1: // 1을 선택했다면 위에서 만든 factorial함수 호출해 함수 실행 후 break로 switch문 빠져나옴
             {
                 factorial();
                 break;
             } 
-            case 2:
+            case 2: // 2를 선택했다면 위에서 만든 sine함수 호출해 함수 실행 후 break로 switch문 빠져나옴 
             {
                 sine();
                 break;
             }
-            case 3:
+            case 3: // 3을 선택했다면 위에서 만든 logBase10함수 호출해 함수 실행 후 break로 switch문 빠져나옴 
             {
                 logBase10();
                 break;
             }
-            case 7:
+            case 7: // 7을 선택했다면 '종료합니다' 출력 후 값을 0으로 반환해 실행 종료
             {
                 printf("종료합니다\n");
                 return 0;
             }
-            default:
+            default: // case에 있는 값이 아닌 다른 값을 입력했을 땐 '잘못된 선택입니다' 출력 후 break로 switch문 빠져나옴
             {
                 printf("잘못된 선택입니다.\n");
                 break;
