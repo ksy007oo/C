@@ -218,3 +218,156 @@ int main(void)
 }
 ```
 ---
+### 나무 높이 측정
+```c
+
+#define _CRT_SECURE_NO_WARNINGS //scanf 에러 방지
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+    double height, distance, tree_height, degrees, radians; // double형으로 변수 지정
+
+    printf("나무와의 길이(단위는 미터): "); // scanf에서 입력받아야할 내용 출력
+    scanf("%lf", &distance); // printf에 입력할 값 입력
+
+    printf("측정자의 키(단위는 미터): "); //scanf에서 입력 받아야할 내용 출력
+    scanf("%lf", &height); // printf에 입력할 값 입력
+
+    printf("각도(단위는 도): "); //scnaf에서 입력 받아야할 내용 출력
+    scanf("%lf", degrees); // printf에 입력할 값 입력
+
+    radians = degrees * (3.141492 / 180.0); // radins 구하는 공식
+
+    tree_height = tan(radians) * distance + height; // 나무 높이 구하는 공식
+    printf("나무의 높이(단위는 미터): %lf \n", tree_height); // 위의 코드에서 구한 값 tree_height에서 받아서 출력
+
+    return 0; // 값을 0 으로 반환해서 종료
+}
+```
+--------------------------------------------------
+### 삼각함수 그리기
+```c
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592 // PI 값 정의 
+
+double rad(double degree)
+{
+    return PI * degree / 180.0;
+}
+
+void drawbar(int height)
+{
+    for (int i = 0; i < height; i++) {
+        printf("*");
+    }
+    printf("\n");
+}
+
+int main(void) 
+{
+    int degree, x, y;
+    for(degree = 0; degree <= 90; degree += 10) {
+         // 사인 값은 -1.0에서 1.0 이므로 정수로 반올림해서 계산
+        y = (int)(60 * sin(rad((double)degree)) + 0.5);
+        drawbar(y);
+    }
+    return 0;
+}
+```
+----------------------------------------------------
+### 공학용 계산기 프로그램 작성
+```c
+#include <stdio.h>
+#include <math.h>
+
+int menu(void)
+{
+    int n;
+    printf("1.팩토리얼\n");
+    printf("2.싸인\n");
+    printf("3.로그(base 10)\n");
+    printf("4.제곱근\n");
+    printf("5.순열(nPr)\n");
+    printf("6.조합(nCr)\n");
+    printf("7.종료\n");
+    printf("선택해주세요: ");
+    scanf("%d", &n);
+    return n;
+}
+
+void factorial()
+{
+    long long n, result = 1, i;
+    printf("정수를 입력하시오: ");
+    scanf("%lld", &n);
+    for(i = 1; i <= n; i++)
+    {
+        result = result * i;
+    }
+    printf("결과 = %lld\n\n", result);
+}
+
+void sine()
+{
+    double a, result;
+    printf("각도를 입력하시오: ");
+    scanf("%lf", &a);
+    result = sin(a);
+    printf("결과 = %lf\n\n", result);
+}
+
+void logBase10()
+{
+    double a, result;
+    printf("실수 값을 입력하시오: ");
+    scanf("%lf", &a);
+    if (a <= 0.0)
+    {
+        printf("오류\n");
+    }
+    else
+    {
+        result = log10(a);
+        printf("결과 = %lf\n\n", result);
+    }
+}
+
+int main(void)
+{
+    while(1)
+    {
+        switch (menu())
+        {
+            case 1:
+            {
+                factorial();
+                break;
+            } 
+            case 2:
+            {
+                sine();
+                break;
+            }
+            case 3:
+            {
+                logBase10();
+                break;
+            }
+            case 7:
+            {
+                printf("종료합니다\n");
+                return 0;
+            }
+            default:
+            {
+                printf("잘못된 선택입니다.\n");
+                break;
+            }
+        }
+    }
+}
+```
+---
