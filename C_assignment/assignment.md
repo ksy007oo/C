@@ -253,14 +253,14 @@ int main(void)
 #include <math.h>
 #define PI 3.141592 // PI 값 정의 
 
-double rad(double degree)
+double rad(double degree) // 호출 할 rad함수 설정, double형 degree를 매개변수로 설정, double은 반환 타입
 {
-    return PI * degree / 180.0;
+    return PI * degree / 180.0; // PI * degree / 180.0을 double형으로 반환해서 함수 종료
 }
 
-void drawbar(int height)
+void drawbar(int height) // 호출 할 함수 drawbar설정, int형 height를 매개변수로 설정, void는 반환값이 없다는 뜻
 {
-    for (int i = 0; i < height; i++) {
+    for (int i = 0; i < height; i++) { // 조건이 안 맞을 때까지 for문 반복
         printf("*");
     }
     printf("\n");
@@ -271,11 +271,11 @@ int main(void)
     int degree, x, y;
     for(degree = 0; degree <= 90; degree += 10) {
          // 사인 값은 -1.0에서 1.0 이므로 정수로 반올림해서 계산
-        y = (int)(60 * sin(rad((double)degree)) + 0.5);
-        drawbar(y);
+        y = (int)(60 * sin(rad((double)degree)) + 0.5); //double형이었던 rad함수 int형으로 형변환하고 함수 호출해 실행
+        drawbar(y); // 위에서 설정한 drawbar함수 호출해 함수 실행
     }
-    return 0;
-}
+    return 0; // 값을 0으로 반환해 종료
+} 
 ```
 ----------------------------------------------------
 ### 공학용 계산기 프로그램 작성
